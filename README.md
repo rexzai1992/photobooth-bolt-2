@@ -17,6 +17,8 @@ Just like Pikachu, **Picapica** brings a spark of excitement to your photos! ⚡
 - **Automatic Photo Capture:** Capture a series of **4 photos** with an integrated **countdown timer**.
 - **Filter Application:** Choose from various filters, including B&W and sepia, to enhance your photos.
 - **Photo Strip Generation:** Display captured photos in a vertical strip format and download them as a PNG file with a timestamp.
+- **Admin Dashboard:** Comprehensive admin interface for managing all generated photos with search, filter, download, and print capabilities.
+- **Database Storage:** All photos are automatically stored with metadata including season IDs, timestamps, and file information.
 
 ## 🛠 Tech Stack
 - **Frontend:** React (with Hooks, Context API)
@@ -24,6 +26,8 @@ Just like Pikachu, **Picapica** brings a spark of excitement to your photos! ⚡
 - **Media API:** WebRTC API
 - **Rendering & Image Processing:** HTML5 Canvas
 - **Styling:** CSS Modules
+- **Database:** Supabase (PostgreSQL)
+- **Authentication:** Supabase Auth
 - **Deployment:** Netlify
 
 ---
@@ -32,6 +36,7 @@ Just like Pikachu, **Picapica** brings a spark of excitement to your photos! ⚡
 ### **Prerequisites**
 - Node.js & npm installed on your system
 - A modern web browser
+- Supabase account and project
 
 **Steps to run locally**
 ```sh
@@ -42,10 +47,18 @@ cd picapica/frontend
 # Install dependencies
 npm install
 
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your Supabase credentials
+
 # Start the development server
 npm start
 ```
 
+### **Admin Setup**
+1. **Database Setup:** The database schema will be automatically created when you connect to Supabase
+2. **Create Admin User:** Use the admin setup utility to create your first admin user
+3. **Access Admin Panel:** Navigate to `/admin` to access the photo management interface
 
 ## 📸 Usage
 1. **Run the app** (`npm start`) and open `http://localhost:3000`
@@ -53,6 +66,13 @@ npm start
 3. **Capture Photos:** Press the **"Capture 4 photos"** button to start the countdown and photo capture sequence.
 4. **Apply Filters:** Select a **filter** to enhance the photos.
 5. **Download Photo Strip:** Once captured, click the **"Download"** button to save the final **photo strip** to your device.
+
+### **Admin Features**
+- **Photo Management:** View all generated photos with metadata
+- **Search & Filter:** Find photos by season ID, date range, or filename
+- **Bulk Operations:** Select multiple photos for download or printing
+- **Individual Actions:** Download, print, or delete individual photos
+- **Secure Access:** Admin authentication required for all management features
 
 **Try it out live:** [PicaPica](https://picapicaa.netlify.app/).
 
@@ -62,6 +82,9 @@ npm start
 - Add AI-powered enhancements (background removal/blur, facial beautification)
 - Allow users to share strips directly to social media
 - Capture a short video during the countdown and include it alongside the photo strip
+- Advanced analytics and reporting for photo generation patterns
+- Automated backup and archival systems
+- Integration with cloud storage providers
 
 
 ### 📜 License
