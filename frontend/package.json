@@ -12,7 +12,10 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.58.0",
+    "bcryptjs": "^3.0.2",
     "gif.js.optimized": "^1.0.1",
+    "lucide-react": "^0.544.0",
     "qrcode.react": "^4.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
