@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, Download, Printer, Upload, LogOut, RefreshCw } from 'lucide-react';
+import { Search, ListFilter as Filter, Download, Printer, Upload, LogOut, RefreshCw } from 'lucide-react';
 import { photoService, adminAuth } from '../../lib/supabase';
 import PhotoGrid from './PhotoGrid';
 
